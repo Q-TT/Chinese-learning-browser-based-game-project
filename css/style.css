@@ -1,0 +1,73 @@
+h1{
+    text-align: center;
+}
+.nav-menu{
+    font-size: 40px;
+    background-color: antiquewhite;
+    padding: 10px;
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .nav-menu a{
+    text-decoration: none;
+    color: black;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+  }
+  
+  .nav-menu a#current{
+    text-decoration: underline;
+    color: black;
+  }
+  
+  .nav-menu a:hover{
+    text-decoration: underline;
+    color: black;
+    text-transform: uppercase;
+  }
+  
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 20px;
+}
+
+.card {
+    width: 100%;
+    height:fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+img {
+    float: left;
+    width:  100%;
+    height: 300px;
+    padding-bottom: 10px;
+}
+ 
+.container {
+    height: 50%;
+    padding: 16px 16px;
+  }
+
+.play {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+  }

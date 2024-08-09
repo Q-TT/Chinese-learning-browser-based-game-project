@@ -9,12 +9,32 @@
 //* Add the wrong-answered quiz to the "redo-list"
 //* After 10 quizes, check correct-rate, winCondition is correct-rate >= 60%
 //* If winRate >= 60%, they reveived the message "Congrats! you pass the quizes. Now you can move to next level"
-
-
 //! how can I automatically move to the next quiz/page???
 //! how can I check the correct-rate corss all html pages??
 
 console.log("check")
+
+let winTimes = 0 // when it is >= 6, users win
+let quizList = 
+[{
+    question:"What is the meaning of the following word?",
+    word:"一",
+    option1:"One",
+    option2:"Two",
+    option3:"Three",
+    option4:"Four",
+    correctOption: "One"},
+
+{
+    question:"What is the meaning of the following word?",
+    word:"九",
+    option1:"Two",
+    option2:"Five",
+    option3:"Nine",
+    option4:"Ten",
+    correctOption: "Nine"},
+
+]
 
 
 const optionEls = document.querySelectorAll(".option")
@@ -30,20 +50,24 @@ const wrongDialogEl = document.querySelector("#wrongModal")
 const correctCloseEl = document.querySelector("#correctClose")
 const wrongCloseEl = document.querySelector("#wrongClose")
 
+//* init() will let me initialize the first question
+//* update quiz() will be called in init function on first render
+//* 
 
-checkCorrect()
+function init() {
+    updateQuiz()
+
+}
 
 function checkCorrect() {
     if (this.id === "correct") {
-        console.log("correct")
         correctDialogEl.showModal()
+        winTimes += 1
     } 
     if(this.id === "wrong") {
-        console.log("wrong")
         wrongDialogEl.showModal()
     }
 }
-
 //! why the function below doesn't work???
 // function checkCorrect(event) {
 //     if (event.target.id === "correct" ) {
@@ -51,15 +75,26 @@ function checkCorrect() {
 //     }
 // }
 
+function updateQuiz() {
+//* update
+
+}
+
+
+
+
+
+
 checkmarkEls.forEach((checkmarkEl) => {
     checkmarkEl.addEventListener("click", checkCorrect)
 })
 
-
 // close the dialog by clicking the close button
 correctCloseEl.addEventListener("click", () => {
     correctDialogEl.close()
+    updateQuiz()
 })
 wrongCloseEl.addEventListener("click", () => {
     wrongDialogEl.close()
+    updateQuiz()
 })

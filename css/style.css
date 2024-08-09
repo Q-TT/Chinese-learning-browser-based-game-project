@@ -166,4 +166,15 @@ img {
       border-radius: 50%;
       background: white;
   }
+
   
+/* style for model*/
+.modal {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%;
+}
+::backdrop {
+    background-color: #000;
+    opacity: 0.5;
+  }

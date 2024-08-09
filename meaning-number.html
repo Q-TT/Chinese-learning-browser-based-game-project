@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/app.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,26 +16,45 @@
             </div>
 
             <div class="options">
-                <label class="option" value="correct">One
-                    <input type="radio" checked="checked" name="radio">
-                    <span class="checkmark"></span>
-                  </label>
-                  <label class="option">Two
+                <label class="option" id="quiz1-option1" value="correct">One
                     <input type="radio" name="radio">
-                    <span class="checkmark"></span>
+                    <span class="checkmark" id="correct"></span>
                   </label>
-                  <label class="option">Three
+
+                  <label class="option" id="quiz1-option2">Two
                     <input type="radio" name="radio">
-                    <span class="checkmark"></span>
+                    <span class="checkmark" id="wrong"></span>
                   </label>
-                  <label class="option">Four
+
+                  <label class="option" id="quiz1-option3">Three
                     <input type="radio" name="radio">
-                    <span class="checkmark"></span>
+                    <span class="checkmark" id="wrong"></span>
                   </label>
+
+                  <label class="option" id="quiz1-option4">Four
+                    <input type="radio" name="radio">
+                    <span class="checkmark" id="wrong"></span>
+                  </label>
+
             </div>  
-        </div>     
+
+        </div>   
 
     </div>
+
+    <dialog id="correctModal" class="modal">
+        <div class="modal-content">
+            <button id="correctClose" autofocus>Close</button>
+            <p>Correct!!!!</p>
+        </div>
+    </dialog>
     
+    <dialog id="wrongModal" class="modal">
+        <div class="modal-content">
+            <button id="wrongClose" autofocus>Close</button>
+            <p>Wrong!!!!</p>
+        </div>
+    </dialog>
+
 </body>
 </html>

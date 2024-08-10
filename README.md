@@ -2,7 +2,7 @@
 ![Low-fi](assest/result_vis.png)
 
 ### Game inspiration:
-This is a game is inspired by a firend of the developer who is learning Chinese during isure time, and this friend always complinning about the current Language learning games aren't good enough. This insried the developer to build a game to help their friend out! This game is designed for **Beginning-level** Chinese Leaner. 
+This is a game is inspired by a firend of the developer who is learning Chinese during leisure time, and this friend always complaining about the current Language learning games aren't good enough. This inspried the developer to build a game to help their friend out! This game is designed for **Beginning-level** Chinese Leaner. 
 
 ### Game summary:
 This game will help users practice their understanding of Chinese characters **Meaning** and **Pronunciation**.

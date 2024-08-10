@@ -24,9 +24,9 @@ This game will help users practice their understanding of Chinese characters **M
 * After first round, the will have the options to redo the wronged quizes, go to the next level or go back to home page.
 
 #### Win Condition:
-For each round of quiz there will be 10 quizes and users need at least have **6 out 10** (60% correct rate) in order to "win". 
+* For each round of quiz there will be 10 quizes and users need at least have **6 out 10** (60% correct rate) in order to "win". 
 
-Only if they "win", they can move to next level, otherwise they have to redo the wrong ones or go back to home page and come back later
+* Only if they "win", they can move to next level, otherwise they have to redo the wrong ones or go back to home page and come back later
 
 
 
@@ -62,11 +62,11 @@ Only if they "win", they can move to next level, otherwise they have to redo the
 
 ###  Next step: 
 
-ReDo list funtion is currently o of scope of MVP, but it's halfly implemented, will add it soon. **Stay tuned!!!**
+* ReDo list funtion is currently o of scope of MVP, but it's halfly implemented, will add it soon. **Stay tuned!!!**
 
-Generte more rounds of quiz under different themes, for the MVP demo purpose, I only got one round of theme for each theme.
+* Generte more rounds of quiz under different themes, for the MVP demo purpose, I only got one round of theme for each theme.
 
-Refine the UI, as for now the it is not very visually appealling.
+* Refine the UI, as for now the it is not very visually appealling.
 
 
 

@@ -106,10 +106,6 @@ let quizList =
 
 
 const optionEls = document.querySelectorAll(".option")
-// const quiz1_Option1 = document.querySelector("#quiz1-option1")
-// const quiz1_Option2 = document.querySelector("#quiz1-option2")
-// const quiz1_Option3 = document.querySelector("#quiz1-option3")
-// const quiz1_Option4 = document.querySelector("#quiz1-option4")
 
 const radioButEls = document.querySelectorAll("input")
 const modalEl = document.querySelector(".moda")
@@ -134,14 +130,11 @@ const redoButEl = document.querySelector("#redoBut")
 const backToHomeEl = document.querySelector("#backToHome")
 const nextLevelEl = document.querySelector("#nextLevel")
 
-//* init() will let me initialize the first question
-//* update quiz() will be called in init function on first render
 
 init()
 
 function init() {
     updateQuiz()
-    console.log(option1El)  
 }
 
 // check if ach quiz is correct, if yes, wintine + 1. if no, push the current quiz to the redo list
@@ -160,8 +153,7 @@ function checkCorrect() {
 function checkIfWin () {
     if(turn === 10 && winTimes >= 6) {
         winDialogEl.showModal()
-        console.log("win") //test
-        console.log(redoList) //test
+
     } else if (turn === 10) {
         loseDialogEl.showModal()
     }
@@ -184,6 +176,7 @@ function updateQuiz() {
     console.log(winTimes)
 }
 
+/*-------------------------------------------Code Graveyard section----------------------------------*/
 //update quiz content to reDoList
 // if turn <= redoList.length, keep going, otherwise, exit the redo round and show them a card "congrats for finishing the redo the quizes"
 
@@ -237,8 +230,4 @@ redoButEl.addEventListener("click", () => {
     updateToRedoList()
     console.log("end of redobutton")
 
-})
-
-option1El.addEventListener("click", () => {
-    option1El.play()
 })

@@ -9,14 +9,12 @@
 //* Add the wrong-answered quiz to the "redo-list"
 //* After 10 quizes, check correct-rate, winCondition is correct-rate >= 60%
 //* If winRate >= 60%, they reveived the message "Congrats! you pass the quizes. Now you can move to next level"
-//! how can I automatically move to the next quiz/page???
 
 
 console.log("check")
 
 let turn = 0 // start from 0, add 1 ecah time users make s seletion
 let winTimes = 0 // when it is >= 6, users win
-let redoList = []
 let quizList = 
 [{
     questionText:"1. What is the meaning of the following word?",
@@ -114,10 +112,6 @@ let quizList =
 
 
 const optionEls = document.querySelectorAll(".option")
-// const quiz1_Option1 = document.querySelector("#quiz1-option1")
-// const quiz1_Option2 = document.querySelector("#quiz1-option2")
-// const quiz1_Option3 = document.querySelector("#quiz1-option3")
-// const quiz1_Option4 = document.querySelector("#quiz1-option4")
 
 const radioButEls = document.querySelectorAll("input")
 const modalEl = document.querySelector(".moda")
@@ -142,8 +136,7 @@ const redoButEl = document.querySelector("#redoBut")
 const backToHomeEl = document.querySelector("#backToHome")
 const nextLevelEl = document.querySelector("#nextLevel")
 
-//* init() will let me initialize the first question
-//* update quiz() will be called in init function on first render
+
 
 init()
 
@@ -167,8 +160,7 @@ function checkCorrect() {
 function checkIfWin () {
     if(turn === 10 && winTimes >= 6) {
         winDialogEl.showModal()
-        console.log("win") //test
-        console.log(redoList) //test
+        
     } else if (turn === 10) {
         loseDialogEl.showModal()
     }

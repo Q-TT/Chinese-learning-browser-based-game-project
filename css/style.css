@@ -175,7 +175,7 @@ input {
 }
 
 #winModal {
-  width: 45%;
+  width: 35%;
   background-color: rgb(146, 247, 213);
   border-color:white;
   border-width: 1px;
@@ -190,7 +190,7 @@ input {
 }
 
 #loseModal {
-  width: 45%;
+  width: 35%;
   background-color: rgb(253, 97, 97);
   border-color:white;
   border-width: 1px;

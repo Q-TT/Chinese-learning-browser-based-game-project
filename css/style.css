@@ -74,7 +74,8 @@ img {
 
 /* style for meaning-number.html below */
 .quiz-container{
-    height: 100%;   
+    height: 100%; 
+    margin-top: 20%;
     
 }
 
@@ -97,6 +98,10 @@ img {
   font-size: xx-large;
   font-family: 'Microsoft YaHei';
   font-weight: bolder;
+  width: fit-content;
+  background-color: #986ce8;
+  border-radius: 8px;
+  padding: 4px 8px;
 }
 
 /* style for radio button */
@@ -105,6 +110,27 @@ img {
   height: 100%;
   padding: 20px;
 }
+#option1 {
+  background-color: #986ce8;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+#option2 {
+  background-color: #986ce8;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+#option3 {
+  background-color: #986ce8;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+#option4 {
+  background-color: #986ce8;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
 label {
     font-size: x-large;
 }
@@ -141,10 +167,60 @@ input {
 }
 
 
-/* page 2 style */
+/* style for pronuacition-number below*/
+.question-chinese-pron{
+  font-size: xx-large;
+  font-family: 'Microsoft YaHei';
+  font-weight: bolder;
+  width: fit-content;
+  background-color: #e95d93;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
 .lable {
   display: flex;
   flex-direction: row;
 
+}
+
+.quiz-2{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:#c9e0f3;
+  border-radius: 10px;
+  padding: 10px 40px;  
+}
+
+.playButton {
+  background-color: #e95d93;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 5px;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.playButton:hover,
+.playButton:focus {
+  background-color: #F082AC;
 }
 

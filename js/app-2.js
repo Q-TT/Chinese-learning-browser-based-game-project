@@ -11,7 +11,7 @@ let audio4 = new Audio(); audio1.src = '';
 let redoList = []
 let quizList = 
 [{
-    questionText:"1. What is the meaning of the following word?",
+    questionText:"1. What is the pronunciation of the following word?",
     questionChinese:"一",
     option1:"assest/pronunciation_zh_一.mp3",
     option2:"assest/pronunciation_zh_九.mp3",
@@ -21,7 +21,7 @@ let quizList =
     redo: false},
 
 {
-    questionText:"2. What is the meaning of the following word?",
+    questionText:"2. What is the pronunciation of the following word?",
     questionChinese:"九",
     option1:"assest/pronunciation_zh_一.mp3",
     option2:"Five",
@@ -30,7 +30,7 @@ let quizList =
     correctOption: "option3",
     redo: false},
 {
-    questionText:"3. What is the meaning of the following word?",
+    questionText:"3. What is the pronunciation of the following word?",
     questionChinese:"四",
     option1:"Seven",
     option2:"Four",
@@ -39,7 +39,7 @@ let quizList =
     correctOption: "option2",
     redo: false},
 {
-    questionText:"4. What is the meaning of the following word?",
+    questionText:"4. What is the pronunciation of the following word?",
     questionChinese:"千",
     option1:"Seven",
     option2:"Two",
@@ -48,7 +48,7 @@ let quizList =
     correctOption: "option4",
     redo: false},
 {
-    questionText:"5. What is the meaning of the following word?",
+    questionText:"5. What is the pronunciation of the following word?",
     questionChinese:"五",
     option1:"Five",
     option2:"Six",
@@ -57,7 +57,7 @@ let quizList =
     correctOption: "option1",
     redo: false},
 {
-    questionText:"6. What is the meaning of the following word?",
+    questionText:"6. What is the pronunciation of the following word?",
     questionChinese:"万",
     option1:"Two thousands",
     option2:"Ten thousands",
@@ -66,7 +66,7 @@ let quizList =
     correctOption: "option2",
     redo: false},
 {
-    questionText:"7. What is the meaning of the following word?",
+    questionText:"7. What is the pronunciation of the following word?",
     questionChinese:"八",
     option1:"Five thousands",
     option2:"Eight",
@@ -75,7 +75,7 @@ let quizList =
     correctOption: "option2",
     redo: false},
 {
-    questionText:"8. What is the meaning of the following word?",
+    questionText:"8. What is the pronunciation of the following word?",
     questionChinese:"七",
     option1:"Eleven",
     option2:"Hundred",
@@ -84,7 +84,7 @@ let quizList =
     correctOption: "option3",
     redo: false},
 {
-    questionText:"9. What is the meaning of the following word?",
+    questionText:"9. What is the pronunciation of the following word?",
     questionChinese:"三",
     option1:"Twelve",
     option2:"Forteen",
@@ -93,7 +93,7 @@ let quizList =
     correctOption: "option4",
     redo: false},
 {
-    questionText:"10. What is the meaning of the following word?",
+    questionText:"10. What is the pronunciation of the following word?",
     questionChinese:"六",
     option1:"Six",
     option2:"Four",
@@ -124,7 +124,7 @@ const loseDialogEl = document.querySelector("#loseModal")
 
 
 const questionTextEl = document.querySelector(".question-text")
-const questionChineseEl = document.querySelector(".question-chinese")
+const questionChineseEl = document.querySelector(".question-chinese-pron")
 const option1El = document.querySelector("#option1")
 const option2El = document.querySelector("#option2")
 const option3El = document.querySelector("#option3")

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/app-2.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-1">
+            <div class="question">
+                <p class="question-text"></p>
+                <p class="question-chinese"></p>  
+            </div>
+
+            
+            <div class="options">
+
+                <div>
+                    <input class= "option" type="radio" name="options" value="option1" />
+                    <label for="option1" id="option1"></label>
+                </div>
+                
+                <div>
+                    <input class= "option" type="radio" name="options" value="option2" />
+                    <label for="option2" id="option2"></label>
+                </div>
+                
+                <div>
+                    <input class= "option" type="radio" name="options" value="option3" />
+                    <label for="option3" id="option3"></label>
+                </div>
+
+                <div>
+                    <input class= "option" type="radio" name="options" value="option4" />
+                    <label for="option4" id="option4"></label>
+                </div>
+    
+            </div>  
+
+        </div>   
+
+    </div>
+
+    <dialog id="correctModal" class="modal">
+        <div class="modal-content">
+            <button id="correctClose" autofocus>X</button>
+            <p>Correct!!!!</p>
+        </div>
+    </dialog>
+    
+    <dialog id="wrongModal" class="modal">
+        <div class="modal-content">
+            <button id="wrongClose" autofocus>X</button>
+            <p>Wrong!!!!</p>
+        </div>
+    </dialog>
+
+    <dialog id="winModal" class="modal">
+        <div class="modal-content">
+            <!-- <button id="winClose" autofocus>X</button> -->
+            <p>Congrats!!!!</p>
+            <p>Yout got at least 6/10 correct!</p>
+            <button id="redoBut">Redo the wrongs</button>
+            <button id="backToHome">Back to home</button>
+            <button id="nextLevel">Next level</button>
+        </div>
+    </dialog>
+
+    <dialog id="loseModal" class="modal">
+        <div class="modal-content">
+            <!-- <button id="loseClose" autofocus>X</button> -->
+            <p>You suck!!!!</p>
+            <p>Now go back and redo the wrongs!</p>
+            <button id="redoBut">Redo the wrongs</button>
+            <button id="backToHome">Back to home</button>
+        </div>
+    </dialog>
+
+</body>
+</html>

@@ -39,7 +39,7 @@ This game will help users practice their understanding of Chinese characters **M
 * He got 5/5 correct, which was identified as “Lose”
 * He wanted to practice the wong works again 
 * He then got 10/10 correct, he was able to unlock the next level
-* Days later, he came back and wanted to see all the words he got wrong before and practice on them. He selected the “Redo List” theme to practice on all the words he got wrong before. 
+* Days later, he came back and wanted to see all the words he got wrong before and practice on them. He selected the “Redo List” theme to practice on all the words he got wrong before **(Out of MVP scope)**
 
 #### John as the user:
 * He wants to practice on his Chinese’s pronunciation  
@@ -48,8 +48,8 @@ This game will help users practice their understanding of Chinese characters **M
 * He go through the first 10 tasks generated under Fruits
 * He got 6/10 correct, which was identified as “Win”
 * He is able to move to next level
-* But, he wanted to practice the wong works again, so he redo the words he got wrong
-* Days later, he came back and wanted to see all the words he got wrong before and practice on them. He selected the “Redo List” theme to practice on all the words he got wrong before.
+* But, he wanted to practice the wong works again, so he redo the words he got wrong **(Out of MVP scope)**
+* Days later, he came back and wanted to see all the words he got wrong before and practice on them. He selected the “Redo List” theme to practice on all the words he got wrong before **(Out of MVP scope)**
 
 
 

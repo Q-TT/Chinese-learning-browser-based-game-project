@@ -138,6 +138,10 @@ const option2El = document.querySelector("#option2")
 const option3El = document.querySelector("#option3")
 const option4El = document.querySelector("#option4")
 
+const redoButEl = document.querySelector("#redoBut")
+const backToHomeEl = document.querySelector("#backToHome")
+const nextLevelEl = document.querySelector("#nextLevel")
+
 //* init() will let me initialize the first question
 //* update quiz() will be called in init function on first render
 
@@ -155,20 +159,22 @@ function checkCorrect() {
     } 
     if(this.value !== quizList[turn].correctOption) {
         wrongDialogEl.showModal()
-        quizList[turn].redo = true
+        redoList.push(quizList[turn])
     }
 }
-       
+ 
+//check if users have more than 60% winrate, if so, show the win card. if not show the lose card
 function checkIfWin () {
     if(turn === 10 && winTimes >= 6) {
         winDialogEl.showModal()
-        console.log("win")
+        console.log("win") //test
+        console.log(redoList) //test
     } else if (turn === 10) {
         loseDialogEl.showModal()
     }
 }
         
-// update quz content and clear the check of the radio button   
+// update quiz content and clear the check of the radio button   
 function updateQuiz() {
     questionTextEl.textContent = quizList[turn].questionText
     questionChineseEl.textContent = quizList[turn].questionChinese
@@ -176,18 +182,28 @@ function updateQuiz() {
     option2El.textContent = quizList[turn].option2
     option3El.textContent = quizList[turn].option3
     option4El.textContent = quizList[turn].option4
+
     radioButEls.forEach((radioButEl) => {
         radioButEl.checked = false
     })
+
     console.log(turn)
     console.log(winTimes)
 }
 
-function updateRedoList () {
-    quizList.forEach((quiz) => {
-        if(quiz.redo === true) {
-            redoList.push(quiz)
-        }
+//update quiz content to reDoList
+// if turn <= redoList.length, keep going, otherwise, exit the redo round and show them a card "congrats for finishing the redo the quizes"
+
+function updateToRedoList () {
+    questionTextEl.textContent = redoList[turn].questionText
+    questionChineseEl.textContent = redoList[turn].questionChinese
+    option1El.textContent = redoList[turn].option1
+    option2El.textContent = redoList[turn].option2
+    option3El.textContent = redoList[turn].option3
+    option4El.textContent = redoList[turn].option4
+
+    radioButEls.forEach((radioButEl) => {
+        radioButEl.checked = false
     })
 }
 
@@ -204,6 +220,7 @@ correctCloseEl.addEventListener("click", () => {
     turn += 1
     checkIfWin()
     updateQuiz()
+    
 })
 
 wrongCloseEl.addEventListener("click", () => {
@@ -211,4 +228,20 @@ wrongCloseEl.addEventListener("click", () => {
     turn += 1
     checkIfWin()
     updateQuiz()
+})
+
+
+// when users click on redo button, update the content to redoList
+redoButEl.addEventListener("click", () => {
+    // close the current modal
+    winDialogEl.close()
+    loseDialogEl.close()
+
+    //reset turn to 0
+    turn = 0
+
+    //trigger the redolist
+    updateToRedoList()
+    console.log("end of redobutton")
+
 })

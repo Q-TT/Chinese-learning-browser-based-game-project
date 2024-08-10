@@ -16,88 +16,99 @@ console.log("check")
 
 let turn = 0 // start from 0, add 1 ecah time users make s seletion
 let winTimes = 0 // when it is >= 6, users win
+let redoList = []
 let quizList = 
 [{
-    questionText:"What is the meaning of the following word?",
+    questionText:"1. What is the meaning of the following word?",
     questionChinese:"一",
     option1:"One",
     option2:"Two",
     option3:"Three",
     option4:"Four",
-    correctOption: "option1"},
+    correctOption: "option1",
+    redo: false},
 
 {
-    questionText:"What is the meaning of the following word?",
+    questionText:"2. What is the meaning of the following word?",
     questionChinese:"九",
     option1:"Two",
     option2:"Five",
     option3:"Nine",
     option4:"Ten",
-    correctOption: "option3"},
+    correctOption: "option3",
+    redo: false},
 {
-    questionText:"What is the meaning of the following word?",
+    questionText:"3. What is the meaning of the following word?",
     questionChinese:"四",
     option1:"Seven",
     option2:"Four",
     option3:"Eleven",
     option4:"Three",
-    correctOption: "option2"},
+    correctOption: "option2",
+    redo: false},
 {
-    questionText:"What is the meaning of the following word?",
+    questionText:"4. What is the meaning of the following word?",
     questionChinese:"千",
     option1:"Seven",
     option2:"Two",
     option3:"Five",
     option4:"Thousand",
-    correctOption: "option4"},
+    correctOption: "option4",
+    redo: false},
 {
-    questionText:"What is the meaning of the following word?",
+    questionText:"5. What is the meaning of the following word?",
     questionChinese:"五",
     option1:"Five",
     option2:"Six",
     option3:"Three",
     option4:"Ten",
-    correctOption: "option1"},
+    correctOption: "option1",
+    redo: false},
 {
-    questionText:"What is the meaning of the following word?",
+    questionText:"6. What is the meaning of the following word?",
     questionChinese:"万",
     option1:"Two thousands",
     option2:"Ten thousands",
     option3:"Thirteen",
     option4:"Six",
-    correctOption: "option2"},
+    correctOption: "option2",
+    redo: false},
 {
-    questionText:"What is the meaning of the following word?",
+    questionText:"7. What is the meaning of the following word?",
     questionChinese:"八",
     option1:"Five thousands",
     option2:"Eight",
     option3:"Six",
     option4:"Ten",
-    correctOption: "option2"},
+    correctOption: "option2",
+    redo: false},
 {
-    questionText:"What is the meaning of the following word?",
+    questionText:"8. What is the meaning of the following word?",
     questionChinese:"七",
     option1:"Eleven",
     option2:"Hundred",
     option3:"Seven",
     option4:"Two",
-    correctOption: "option3"},
+    correctOption: "option3",
+    redo: false},
 {
-    questionText:"What is the meaning of the following word?",
+    questionText:"9. What is the meaning of the following word?",
     questionChinese:"三",
     option1:"Twelve",
     option2:"Forteen",
     option3:"Ten",
     option4:"Three",
-    correctOption: "option4"},
+    correctOption: "option4",
+    redo: false},
 {
-    questionText:"What is the meaning of the following word?",
+    questionText:"10. What is the meaning of the following word?",
     questionChinese:"六",
     option1:"Six",
     option2:"Four",
     option3:"Two",
     option4:"Ten",
-    correctOption: "option1"},
+    correctOption: "option1",
+    redo: false},
 ]
 
 
@@ -113,9 +124,12 @@ const modalEl = document.querySelector(".moda")
 
 const correctDialogEl = document.querySelector("#correctModal")
 const wrongDialogEl = document.querySelector("#wrongModal")
-
 const correctCloseEl = document.querySelector("#correctClose")
 const wrongCloseEl = document.querySelector("#wrongClose")
+
+const winDialogEl = document.querySelector("#winModal")
+const loseDialogEl = document.querySelector("#loseModal")
+
 
 const questionTextEl = document.querySelector(".question-text")
 const questionChineseEl = document.querySelector(".question-chinese")
@@ -128,30 +142,33 @@ const option4El = document.querySelector("#option4")
 //* update quiz() will be called in init function on first render
 
 init()
+
 function init() {
-    updateQuiz()
+    updateQuiz()  
 }
 
-
+// check if ach quiz is correct, if yes, wintine + 1. if no, push the current quiz to the redo list
 function checkCorrect() {
     if (this.value === quizList[turn].correctOption) {
-        console.log("yes!")
         correctDialogEl.showModal()
         winTimes += 1
     } 
     if(this.value !== quizList[turn].correctOption) {
         wrongDialogEl.showModal()
+        quizList[turn].redo = true
     }
 }
-//! why the function below doesn't work???
-//! when do we need target, when we don't???
-// function checkCorrect(event) {
-//     if (event.target.id === "correct" ) {
-//         console.log("correct")
-//     }
-// }
-
-// update quz content and clear the check of the radio button
+       
+function checkIfWin () {
+    if(turn === 10 && winTimes >= 6) {
+        winDialogEl.showModal()
+        console.log("win")
+    } else if (turn === 10) {
+        loseDialogEl.showModal()
+    }
+}
+        
+// update quz content and clear the check of the radio button   
 function updateQuiz() {
     questionTextEl.textContent = quizList[turn].questionText
     questionChineseEl.textContent = quizList[turn].questionChinese
@@ -162,6 +179,16 @@ function updateQuiz() {
     radioButEls.forEach((radioButEl) => {
         radioButEl.checked = false
     })
+    console.log(turn)
+    console.log(winTimes)
+}
+
+function updateRedoList () {
+    quizList.forEach((quiz) => {
+        if(quiz.redo === true) {
+            redoList.push(quiz)
+        }
+    })
 }
 
 
@@ -171,15 +198,17 @@ radioButEls.forEach((radioButEl) => {
 })
 
 
-// close the dialog by clicking the close button
+// close the dialog by clicking the close button and move forward
 correctCloseEl.addEventListener("click", () => {
     correctDialogEl.close()
     turn += 1
+    checkIfWin()
     updateQuiz()
 })
 
 wrongCloseEl.addEventListener("click", () => {
     wrongDialogEl.close()
     turn += 1
+    checkIfWin()
     updateQuiz()
 })

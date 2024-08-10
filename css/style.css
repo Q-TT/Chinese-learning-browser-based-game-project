@@ -118,9 +118,24 @@ input {
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     width: 80%;
+    font-size: larger;
 }
 
 ::backdrop {
     background-color: #000;
     opacity: 0.5;
   }
+
+#correctModal {
+  background-color: aquamarine;
+  border-color:white;
+  border-width: 2px;
+  border-radius: 10px;
+}
+
+#wrongModal {
+  background-color:firebrick;
+  border-color:white;
+  border-width: 2px;
+  border-radius: 10px;
+}

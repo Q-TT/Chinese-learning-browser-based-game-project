@@ -59,6 +59,11 @@ This game will help users practice their understanding of Chinese characters **M
 ![Low-fi](assest/low-fi.png)
 ##### [Design Figma link](https://www.figma.com/design/TG2Q4bIzzBqnwHP5Ws6QhV/Browser-based-game-project-Chinese-learning?node-id=0-1&t=unDkxW70gMcfOBpJ-1)
 
+### Technologies Used: 
+* JavaScript 
+* HTML 
+* CSS
+
 
 ###  Next step: 
 

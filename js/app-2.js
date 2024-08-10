@@ -13,8 +13,8 @@ let quizList =
 [{
     questionText:"1. What is the meaning of the following word?",
     questionChinese:"一",
-    option1:"assest/一.mp3",
-    option2:"assest/pronunciation_zh_一.mp3",
+    option1:"assest/pronunciation_zh_一.mp3",
+    option2:"assest/pronunciation_zh_九.mp3",
     option3:"assest/pronunciation_zh_一.mp3",
     option4:"assest/pronunciation_zh_一.mp3",
     correctOption: "option1",

@@ -110,11 +110,13 @@ img {
   height: 100%;
   padding: 20px;
 }
+
 #option1 {
   background-color: #986ce8;
   border-radius: 8px;
   padding: 4px 8px;
 }
+
 #option2 {
   background-color: #986ce8;
   border-radius: 8px;
@@ -132,7 +134,8 @@ img {
 }
 
 label {
-    font-size: x-large;
+  font-size: x-large;
+  color: #FFFFFF;
 }
 input {
   margin: 0.8rem;

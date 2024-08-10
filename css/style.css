@@ -200,8 +200,24 @@ input {
   border-radius: 5px;
 }
 
+#correctClose,
+#wrongClose {
+  background-color:white;
+  border-radius: 2px;
+  border-style: none;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: large;
+  font-weight: 500;
+  height: 30px;
+  transition: color 100ms;
+}
+
 #redoBut,
-#backToHome {
+#backToHome,
+#nextLevel {
   background-color: white;
   border-radius: 2px;
   border-style: none;
@@ -214,10 +230,11 @@ input {
   height: 30px;
   transition: color 100ms;
 }
+
+#correctClose:hover,
+#wrongClose:hover,
 #redoBut:hover,
-#redoBut:focus,
-#backToHome:hover,
-#backToHome:focus {
+#backToHome:hover {
   background-color:rgb(233, 219, 219);
 }
 

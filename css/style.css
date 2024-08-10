@@ -159,19 +159,67 @@ input {
   }
 
 #correctModal {
-  background-color: aquamarine;
+  background-color: rgb(146, 247, 213);
   border-color:white;
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 10px;
 }
 
 #wrongModal {
-  background-color:firebrick;
+  background-color:rgb(253, 97, 97);
   border-color:white;
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 10px;
 }
 
+#winModal {
+  width: 45%;
+  background-color: rgb(146, 247, 213);
+  border-color:white;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+#winModlImage {
+  width: fit;
+  height: auto;
+  border-radius: 5px;
+}
+
+#loseModal {
+  width: 45%;
+  background-color: rgb(253, 97, 97);
+  border-color:white;
+  border-width: 1px;
+  border-radius: 10px;
+}
+
+#loseModlImage {
+  width: fit;
+  height: auto;
+  border-radius: 5px;
+}
+
+#redoBut,
+#backToHome {
+  background-color: white;
+  border-radius: 2px;
+  border-style: none;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-size: small;
+  font-weight: 500;
+  height: 30px;
+  transition: color 100ms;
+}
+#redoBut:hover,
+#redoBut:focus,
+#backToHome:hover,
+#backToHome:focus {
+  background-color:rgb(233, 219, 219);
+}
 
 /* style for pronuacition-number below*/
 .question-chinese-pron{
